@@ -1,0 +1,27 @@
+{% extends '../base.html' %}
+
+{% block title %} EDIT POST {% endblock %}
+
+{% block content %}
+ <div class="content">
+        <div class="container">
+            <div class="posts">
+                <h1 class="mt-3 mb-3">edit post</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    <div id="div_id_content" class="form-group">
+        <label for="id_content" class=" requiredField">Контент<span class="asteriskField">*</span></label><div><textarea name="content" cols="40" rows="10" class="textarea form-control" required="" id="id_content">
+        {{ post.content }}
+        </textarea></div></div>
+        {% if post.postImg %}
+        <div><textarea name="content" cols="40" rows="10" class="textarea form-control" required="" id="id_content"></textarea></div>
+        {% else %}
+        <div><textarea name="content" cols="40" rows="10" class="textarea form-control" required="" id="id_content"></textarea></div>
+        {% endif %}
+                    <button class="btn btn-primary mt-3 mb-3">OK</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

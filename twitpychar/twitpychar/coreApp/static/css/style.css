@@ -1,0 +1,48 @@
+header{
+    background-color: blue;
+    padding: 10px;
+}
+.menu-item{
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+
+}
+.avatar{
+     width: 48px;
+     height: 48px;
+     background-color: blue;
+     border-radius: 50%;
+     color: white;
+}
+.letter{
+    position: relative;
+    left: 18px;
+    top: 12px;
+}
+.user-name h4{
+    font-size: 18px;
+}
+.user-name p {
+    font-size: 12px;
+}
+.user-content p {
+text-align: justify;
+font-size: 12px;
+}
+.fixed-button{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 48px;
+    height: 48px;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 50%;
+}
+.fixed-button img {
+    width: 70%;
+    position: relative;
+    top: 10px;
+    left: 8px;
+}

@@ -1,0 +1,40 @@
+{% extends '../base.html' %}
+
+{% block title %} Главная {% endblock %}
+
+{% block content %}
+<a href="{% url 'addPost' %}" class="fixed-button"><img class="fts" src="img/add.png"  alt=""></a>
+<div class="content">
+        <div class="container">
+            <div class="posts">
+                <h1 class="mt-3 mb-3">POSTS</h1>
+                {% for post in posts %}
+                <div class="card border-warning mb-3">
+                    <div class="card-body">
+                        <div class="user-data">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="avatar">
+                                        <p class="letter">{{ post.userPost|make_list|first }}</p>
+                                    </div>
+                                </div>
+                                <div class="col-10">
+                                    <div class="user-name">
+                                        <h4>{{ user.username }}</h4>
+                                        <p>DATE: {{post.postDate}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-content">
+                            <p>{{ post.content|truncatewords:20 }}</p>
+                            </div>
+                        <a href="{% url 'detailPost' pk=post.pk %}" class=" mt-3 btn btn-primary">READ</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
